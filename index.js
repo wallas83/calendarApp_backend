@@ -10,8 +10,12 @@ const app  = express();
 app.use(express.static('public'))
 
 
-// ruitas
+// rutas
 app.use('/api/auth', require('./routes/auth'));
+
+//lectura y parseo del body
+app.use(express.json());
+
 
 // escuchar peticiones
 
